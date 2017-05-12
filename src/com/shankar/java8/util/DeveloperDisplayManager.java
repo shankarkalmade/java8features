@@ -10,12 +10,16 @@ public class DeveloperDisplayManager {
 		
 		System.out.println("=======================================================================");
 		for(Developer dev : devList) {
-			System.out.println(rightPadding(dev.getName(), 20) + "         "+ rightPadding(dev.getAge()+"", 3)+  "         "+ rightPadding(dev.getSalary()+"", 8));
+			displayDeveloper(dev);
 		}
 		System.out.println("=======================================================================");
 	}
 
 	public static String rightPadding(String str, int num) {
 	    return String.format("%1$-" + num + "s", str);
+	}
+	
+	public static void displayDeveloper( Developer dev) {
+		System.out.println(rightPadding(dev.getName(), 20) + "         "+ rightPadding(dev.getAge()+"", 3)+  "         "+ rightPadding(dev.getSalary()+"", 8));
 	}
 }
